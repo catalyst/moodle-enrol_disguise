@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace enrol_userdisguise\privacy;
+namespace enrol_disguise\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Privacy Subsystem implementation for enrol_userdisguise.
+ * Privacy Subsystem implementation for enrol_disguise.
  *
- * @package    enrol_userdisguise
+ * @package    enrol_disguise
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

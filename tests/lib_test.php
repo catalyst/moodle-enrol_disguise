@@ -19,9 +19,9 @@ namespace tests;
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Tests for the enrol_userdisguise_plugin class.
+ * Tests for the enrol_disguise_plugin class.
  *
- * @package enrol_userdisguise
+ * @package enrol_disguise
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

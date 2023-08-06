@@ -21,12 +21,12 @@ require_once("$CFG->libdir/formslib.php");
 /**
  * User disguise add instance form.
  *
- * @package    enrol_userdisguise
+ * @package    enrol_disguise
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class enrol_userdisguise_enrol_form extends moodleform {
+class enrol_disguise_enrol_form extends moodleform {
 
     protected function definition()
     {

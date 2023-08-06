@@ -17,7 +17,7 @@
 /**
  * Capabilities for user disguise enrolment plugin.
  *
- * @package    enrol_userdisguise
+ * @package    enrol_disguise
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'enrol/userdisguise:config' => array(
+    'enrol/disguise:config' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => array(

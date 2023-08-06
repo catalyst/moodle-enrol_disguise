@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace enrol_userdisguise\manager;
+namespace enrol_disguise\manager;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Class enrol_userdisguise\manager\activity
+ * Class enrol_disguise\manager\activity
  *
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT

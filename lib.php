@@ -16,15 +16,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-use enrol_userdisguise\manager\user as user_manager;
+use enrol_disguise\manager\user as user_manager;
 /**
- * Class enrol_userdisguise_plugin
+ * Class enrol_disguise_plugin
  *
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class enrol_userdisguise_plugin extends enrol_plugin {
+class enrol_disguise_plugin extends enrol_plugin {
 
     public function can_add_instance($courseid) {
         return true;
@@ -86,7 +86,7 @@ class enrol_userdisguise_plugin extends enrol_plugin {
 
 }
 
-function enrol_userdisguise_after_require_login() {
+function enrol_disguise_after_require_login() {
     global $USER, $PAGE, $DB;
 
     // Check if user disguise is enabled.

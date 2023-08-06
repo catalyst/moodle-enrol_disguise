@@ -17,7 +17,7 @@
 /**
  * User disguise access plugin version specification.
  *
- * @package    enrol_userdisguise
+ * @package    enrol_disguise
  * @author  Nathan Nguyen <nathannguyen@catalyst-au.net>
  * @copyright  Catalyst IT
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -26,5 +26,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2023072402;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2023041800;        // Requires this Moodle version.
-$plugin->component = 'enrol_userdisguise';     // Full name of the plugin (used for diagnostics)
+$plugin->requires  = 2022112800;        // Requires this Moodle version.
+$plugin->component = 'enrol_disguise';     // Full name of the plugin (used for diagnostics)
