@@ -26,61 +26,10 @@ defined('MOODLE_INTERNAL') || die();
 class enrol_disguise_plugin extends enrol_plugin {
 
     public function can_add_instance($courseid) {
-        return true;
+        return false;
     }
-
-    public function add_instance($course, array $fields = NULL) {
-        return parent::add_instance($course, $fields);
-    }
-
-    public function add_default_instance($course) {
-        $fields = [];
-        return $this->add_instance($course, $fields);
-    }
-
-    public function restore_instance(restore_enrolments_structure_step $step, stdClass $data, $course, $oldid) {
-    }
-
-    public function get_instance_defaults() {
-        return array();
-    }
-
-    public function can_delete_instance($instance) {
-        return true;
-    }
-
     public function can_hide_show_instance($instance) {
         return true;
-    }
-
-    public function enrol_user(stdClass $instance, $userid, $roleid = null, $timestart = 0, $timeend = 0,
-                               $status = null, $recovergrades = null) {
-        return;
-    }
-
-    public function unenrol_user(stdClass $instance, $userid) {
-        return;
-    }
-
-    public function get_enrol_info(stdClass $instance) {
-        $instanceinfo = new stdClass();
-        return $instanceinfo;
-    }
-
-    public function use_standard_editing_ui() {
-        return true;
-    }
-
-    public function edit_instance_validation($data, $files, $instance, $context) {
-        return array();
-    }
-
-    public function course_updated($inserted, $course, $data) {
-
-    }
-
-    public function edit_instance_form($instance, MoodleQuickForm $mform, $context) {
-
     }
 
 }
