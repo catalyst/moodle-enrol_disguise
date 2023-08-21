@@ -27,65 +27,15 @@ defined('MOODLE_INTERNAL') || die();
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class lib_test extends \advanced_testcase {
-
-    public function setUp(): void {
-        $this->resetAfterTest();
-    }
-
     public function test_can_add_instance() {
         $this->assertTrue(false, "TODO");
     }
 
-    public function test_add_instance() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_add_default_instance() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_restore_instance() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_get_instance_defaults() {
+    public function test_can_hide_show_instance() {
         $this->assertTrue(false, "TODO");
     }
 
     public function test_can_delete_instance() {
         $this->assertTrue(false, "TODO");
     }
-
-    public function test_can_hideshowinstance() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_enrol_user() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_unenrol_userr() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_get_enrol_info() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_use_standard_editing_ui() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_edit_instance_validation() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_course_updated() {
-        $this->assertTrue(false, "TODO");
-    }
-
-    public function test_edit_instance_form() {
-        $this->assertTrue(false, "TODO");
-    }
-
 }

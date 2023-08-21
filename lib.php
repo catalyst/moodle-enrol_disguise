@@ -26,9 +26,16 @@ defined('MOODLE_INTERNAL') || die();
 class enrol_disguise_plugin extends enrol_plugin {
 
     public function can_add_instance($courseid) {
+        // Do not allow user to add enrolment method to the course.
         return false;
     }
+
     public function can_hide_show_instance($instance) {
+        return true;
+    }
+
+    public function can_delete_instance($instance)
+    {
         return true;
     }
 
