@@ -34,9 +34,25 @@ class enrol_disguise_plugin extends enrol_plugin {
         return true;
     }
 
-    public function can_delete_instance($instance)
-    {
+    public function can_delete_instance($instance) {
         return true;
+    }
+
+    public function add_instance($course, array $fields = NULL) {
+        global $DB;
+        // Check if there is existing enrol disguise instance.
+        $enrolrecords = $DB->get_records('enrol',[
+            'enrol' => 'disguise',
+            'courseid' => $course->id,
+        ]);
+
+        // Prevent duplicate enrol disguise instance.
+        if (count($enrolrecords) > 0) {
+            $instance = reset($enrolrecords);
+            return $instance->id;
+        }
+
+        return parent::add_instance($course, $fields);
     }
 
 }

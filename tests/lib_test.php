@@ -27,15 +27,73 @@ defined('MOODLE_INTERNAL') || die();
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class lib_test extends \advanced_testcase {
+
+    /**
+     * Test that user can add new enrol instance.
+     */
     public function test_can_add_instance() {
-        $this->assertTrue(false, "TODO");
+        $this->resetAfterTest();
+        self::setAdminUser();
+        $course = self::getDataGenerator()->create_course();
+        $enrolplugin = \enrol_get_plugin('disguise');
+        $canaddinstance = $enrolplugin->can_add_instance($course->id);
+
+        $this->assertFalse($canaddinstance, "The enrol instance should not be added by user.");
     }
 
+    /**
+     * Test that user can hide/show enrol instance.
+     */
     public function test_can_hide_show_instance() {
-        $this->assertTrue(false, "TODO");
+        $this->resetAfterTest();
+        self::setAdminUser();
+        $course = self::getDataGenerator()->create_course();
+        $enrolplugin = \enrol_get_plugin('disguise');
+        $canhideshowinstance = $enrolplugin->can_hide_show_instance($course->id);
+
+        $this->assertTrue($canhideshowinstance, "User should be able to hide/show the enrol instance.");
     }
 
+    /**
+     * Test that user can delete enrol instance.
+     */
     public function test_can_delete_instance() {
-        $this->assertTrue(false, "TODO");
+        $this->resetAfterTest();
+        self::setAdminUser();
+        $course = self::getDataGenerator()->create_course();
+        $enrolplugin = \enrol_get_plugin('disguise');
+        $candeleteinstance = $enrolplugin->can_delete_instance($course->id);
+
+        $this->assertTrue($candeleteinstance, "User should be able to delete the enrol instance.");
+    }
+
+    /**
+     * Test that there is only one enrol instance.
+     */
+    public function test_no_duplicate_instance() {
+        global $DB;
+        $this->resetAfterTest();
+        $course = self::getDataGenerator()->create_course();
+        $enrolplugin = \enrol_get_plugin('disguise');
+
+        // Add enrol disguise instance.
+        $enrolplugin->add_instance($course);
+        // Check if there is only one enrol disguise instance.
+        $enrolrecords = $DB->count_records('enrol',[
+            'enrol' => 'disguise',
+            'courseid' => $course->id,
+        ]);
+        $this->assertEquals(1, $enrolrecords);
+
+        // Add enrol disguise instance again.
+        $enrolplugin->add_instance($course);
+
+        // Check if there is only one enrol disguise instance.
+        $enrolrecords = $DB->count_records('enrol',[
+            'enrol' => 'disguise',
+            'courseid' => $course->id,
+        ]);
+        $this->assertEquals(1, $enrolrecords);
+
     }
 }
